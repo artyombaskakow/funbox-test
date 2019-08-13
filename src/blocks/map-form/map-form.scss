@@ -1,0 +1,67 @@
+.map-form{
+    width: 100%;
+}
+
+.map-form__input{
+    padding: 10px 15px;
+    border: 1px solid #d8d8d8;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: border-color .2s;
+
+    &:focus,
+    &:hover{
+        border-color: $primaryColor;
+    }
+}
+
+
+.map-form__waypoint-item{
+    display: flex;
+    justify-content: left;
+    padding: 10px 15px;
+    border: 1px solid #d8d8d8;
+    margin-top: -1px;
+    align-items: center;
+    background: white;
+    transition: box-shadow 0.2s;
+
+    &:hover>.map-form__icon-marker{
+        transform: scale(1.5);
+    }
+
+    &.ui-sortable-helper{
+        box-shadow: 0 1px 5px 0px #a5a1a1;
+    }
+}
+
+.map-form__waypoint-text{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.map-form__icon-marker{
+    margin-right: 10px;
+    transition: all .5s;
+}
+
+.map-form__waypoint-remove{
+    margin-left: auto;
+    display: flex;
+
+    &:hover{
+        cursor: pointer;
+
+        &>.map-form__remove-icon{
+            color: red;
+            transform: scale(1.2);
+        }
+    }
+}
+
+.map-form__remove-icon{
+    font-size: rem(20px);
+    transition: all .2s;
+}

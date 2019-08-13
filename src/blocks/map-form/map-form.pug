@@ -1,0 +1,7 @@
+mixin map-form(options={})
+    -
+        var placeholder = options.placeholder ? options.placeholder : 'Новая точка маршрута';
+    .map-form
+        input.map-form__input(type="text", placeholder=placeholder)
+        .map-form__waypoints-container 
+            ul.map-form__waypoints-list

@@ -1,0 +1,20 @@
+include ../blocks/blocks
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='urf-8')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="")
+        meta(name="keywords" content="")
+        title Тестовое задание FunBox
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=8e6f6e8a-74a4-40eb-8d97-375ec4a1908d&lang=ru_RU" type="text/javascript")
+        
+    body
+      main.content
+        .page-header Fun<br/>Box
+        .page-container
+          .form-map-container
+            +map-form
+          .map-container
+            +yamap
