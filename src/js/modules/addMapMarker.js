@@ -3,7 +3,7 @@ import renderMapPolyline from './renderMapPolyline';
 import initPlacemark from './initPlacemark';
 import bindPlacemarkEvents from './bindPlacemarkEvents';
 
-export default function addMapMarker(app, wayPointObj){
+export default function addMapMarker(app, wayPointObj, callback){
 
     getGeoObjectByGeocode(wayPointObj.address, (GeoObject) => {
 
@@ -13,6 +13,10 @@ export default function addMapMarker(app, wayPointObj){
 
         app.map.geoObjects.add( placemark);
         app.map.setCenter(coords);
+
+        if(callback){
+            callback();
+        }
 
         bindPlacemarkEvents(app, wayPointObj);
         renderMapPolyline(app, wayPointObj);

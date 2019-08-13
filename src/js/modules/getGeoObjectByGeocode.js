@@ -12,14 +12,14 @@ export default function getGeoObjectByGeocode(geocode, callback){
             if(responseObj.response.GeoObjectCollection.featureMember.length){
 
                 let geoObject = responseObj.response.GeoObjectCollection.featureMember[0].GeoObject;
-                console.log('geoObject', geoObject);
+                //console.log('geoObject', geoObject);
                 
                 if(callback){
                     callback(geoObject);
                 }
 
             } else{
-                console.log('empy response', response);
+                alert('Не удалось найти введенный адрес. Попробуйте еще раз');
             }
         }
     })
