@@ -1,5 +1,4 @@
 # funbox-test
-Тестовое задание на вакансию Frontend-разработчика
 
 Ссылка на демонстрационную страницу:
 https://artyombaskakow.github.io/funbox-test-demo/index.html
